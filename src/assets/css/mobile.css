@@ -1,0 +1,189 @@
+
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+}
+:root {
+    --background-body: #edf4ff;
+    --azul-primario: #0046BE;
+    --azul-secundario: #d6e4ff;
+    --azul-terciario: #cde7e3;
+    --azul-dark: #00328F;
+    --btn-primario: #2161bd;
+    --btn-secundario: #d6e4ff;
+    --color-warning: #ff8800;
+    --color-danger: #f23d4f;
+    --color-titulos: #4b4b4b;
+    --color-cuerpo: #141414;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vh;
+    color: var(--color-cuerpo);
+}
+
+.font-thin {
+    font-weight: 300;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+.titulos{
+    color: var(--color-titulos);
+}
+.btn {
+    margin: .375rem;
+    text-transform:none;
+    cursor: pointer;
+    border: 0;
+    border-radius: .125rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+    -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    padding: .64rem 1.5rem;
+    font-size: .81rem;
+}
+
+.btn-rounded {
+    border-radius: 10em;
+}
+.btn-link {
+    color: #2161bd!important;
+    background-color: transparent!important;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    font-size: 1rem;
+    padding: 0 !important;
+}
+.btn-primario {
+    background-color: var(--btn-primario);
+    color: white;
+}
+.btn-primario:hover {
+    background-color: var(--btn-secundario);
+    color: var(--azul-primario);
+}
+.color-primario {
+    color: var(--azul-primario);
+}
+
+.color-secundario {
+    color: var(--azul-secundario);
+}
+
+.display-4 {
+    font-size: 2.7rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.relative {
+    position: relative;
+}
+
+.bg-body{
+    background-color: #F4F6F9;
+}
+
+.md-form .validate {
+    margin-bottom: 1.5rem;
+}
+.card {
+    font-weight: 400;
+    border: 0;
+    -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 10%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+}
+.card-ingresar{
+    padding: .35rem;
+}
+/* Estilos del carrousel */
+
+.owl-theme .owl-nav [class*=owl-] {
+    color: #FFF;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 0px;
+}
+.owl-theme .owl-nav {
+    font-size: 35px;
+    line-height: 35px;
+}
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev{
+    background: 0 0;
+    color: #fff!important;
+    border-radius: 50%;
+    font: inherit;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: inherit;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 5px!important;
+    line-height: 21px!important;
+
+}
+.owl-carousel .owl-nav button.owl-next span, .owl-carousel .owl-nav button.owl-prev span{
+    line-height: 21px;
+}
+.owl-prev{left: 0px;}
+.owl-next{right: 0px;}
+.owl-prev,.owl-next{
+    position: absolute;
+    top: calc(50% - 20px);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.owl-dots{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: rgba(0, 0, 0, 0.5);
+}
+.owl-dot:hover, .owl-dot:active, .owl-dot:focus {outline: 0;}
+
+/* Estilos Ingresar */
+
+.txtRegistro{
+    line-height: 1.7;
+    font-size: 1.15rem;
+}
+.realce{
+    color: var(--azul-dark);
+}
+
+.nav-pills .nav-link {
+    border-radius: .25rem;
+    border: solid 1px;
+    border-color: var(--btn-primario);
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: var(--btn-primario);
+}
