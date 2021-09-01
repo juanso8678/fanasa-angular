@@ -1,0 +1,289 @@
+<app-menu></app-menu>
+<app-slider-banner></app-slider-banner>
+<section id="contenedor">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-11">
+                <h2 class="titulos">{{ title }}</h2>
+            </div>
+            <div class="col-lg-11">
+                <div class="row">
+                    <!-- Encabezaso carritp Desktop -->
+                    <div class="col-lg-9 d-none d-lg-block">
+                        <div class="row align-items-center py-4 border-bottom">
+                            <div class="col-12 col-lg-1 text-lg-center text-right">
+                            </div>
+                            <div class="col-4 col-lg-2">
+                            </div>
+                            <div class="col-8 col-lg-3">
+                                <h5 class="color-titulos">Producto</h5>
+                            </div>
+                            <div class="col-12 col-lg-2 text-center">
+                                <h5 class="color-titulos">Precio</h5>
+                            </div>
+                            <div class="col-12 col-lg-2">
+                                <h5 class="color-titulos">Cantidad</h5>
+                            </div>
+                            <div class="col-12 col-lg-2 text-right">
+                                <h5 class="color-titulos">Subtotal</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card producto Desktop -->
+                    <div class="col-lg-9 d-none d-lg-block">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row align-items-center white py-4 border-bottom">
+                                    <div class="col-12 col-lg-1 text-lg-center text-right">
+                                        <a href="#" class="color-titulos">
+                                            <i class="fas fa-times fa-2x" class="color-titulos"></i>
+                                            <p>Eliminar</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-lg-2">
+                                        <img src="../../../assets/images/Image-placeholder-small.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 col-lg-3">
+                                        <h6 class="mb-2">{{ ProductName }}</h6>
+                                        <h6 class="font-weight-bold">Código: {{ ProductCode }}</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-2 text-center">
+                                        <h6 class="color-titulos">{{ ProductPrice | currency }}</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-2">
+                                        <div class="def-number-input number-input safari_only mx-auto">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                            <input class="quantity" min="1" name="quantity" value="1" type="number">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 text-right">
+                                        <h6 class="color-titulos"> {{ ProductSubtotal | currency }}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="row align-items-center white py-4 border-bottom">
+                                    <div class="col-12 col-lg-1 text-lg-center text-right">
+                                        <a href="#" class="color-titulos">
+                                            <i class="fas fa-times fa-2x" class="color-titulos"></i>
+                                            <p>Eliminar</p>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 col-lg-2">
+                                        <img src="../../../assets/images/Image-placeholder-small.jpg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="col-8 col-lg-3">
+                                        <h6 class="mb-2">{{ ProductName }}</h6>
+                                        <h6 class="font-weight-bold">Código: {{ ProductCode }}</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-2 text-center">
+                                        <h6 class="color-titulos">{{ ProductPrice | currency }}</h6>
+                                    </div>
+                                    <div class="col-12 col-lg-2">
+                                        <div class="def-number-input number-input safari_only mx-auto">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                            <input class="quantity" min="1" name="quantity" value="1" type="number">
+                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 text-right">
+                                        <h6 class="color-titulos"> {{ ProductSubtotal | currency }}</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card producto mobile -->
+
+                    <div class="col-12 d-block d-lg-none white">
+                        <div class="row py-3 border-bottom">
+                            <div class="col-4">
+                                <img src="../../../assets/images/Image-placeholder-small.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row border-bottom  py-3">
+                                            <div class="col-9">
+                                                <h6>{{ ProductName }}</h6>
+                                                <h6>Código: {{ ProductCode }}</h6>
+                                            </div>
+                                            <div class="col-3 text-center">
+                                                <a href="#" class="color-titulos">
+                                                    <i class="fas fa-times fa-2x" class="color-titulos"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row border-bottom py-2">
+                                            <div class="col-5">
+                                                <h6 class="font-weight-bold">Precio</h6>
+                                            </div>
+                                            <div class="col-7 text-right">
+                                                <h6>{{ ProductPrice | currency }}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row border-bottom align-items-center py-2">
+                                            <div class="col-12">
+                                                <h6 class="font-weight-bold">Cantidad</h6>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="def-number-input number-input safari_only">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity" min="1" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row py-2">
+                                            <div class="col-5">
+                                                <h6 class="font-weight-bold">Subtotal</h6>
+                                            </div>
+                                            <div class="col-7 text-right">
+                                                <h6>{{ ProductSubtotal | currency }}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-block d-lg-none white">
+                        <div class="row py-3 border-bottom">
+                            <div class="col-4">
+                                <img src="../../../assets/images/Image-placeholder-small.jpg" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="row border-bottom  py-3">
+                                            <div class="col-9">
+                                                <h6>{{ ProductName }}</h6>
+                                                <h6>Código: {{ ProductCode }}</h6>
+                                            </div>
+                                            <div class="col-3 text-center">
+                                                <a href="#" class="color-titulos">
+                                                    <i class="fas fa-times fa-2x" class="color-titulos"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row border-bottom py-2">
+                                            <div class="col-5">
+                                                <h6 class="font-weight-bold">Precio</h6>
+                                            </div>
+                                            <div class="col-7 text-right">
+                                                <h6>{{ ProductPrice | currency }}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row border-bottom align-items-center py-2">
+                                            <div class="col-12">
+                                                <h6 class="font-weight-bold">Cantidad</h6>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="def-number-input number-input safari_only">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>
+                                                    <input class="quantity" min="1" name="quantity" value="1" type="number">
+                                                    <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-2">
+                                        <div class="row py-2">
+                                            <div class="col-5">
+                                                <h6 class="font-weight-bold">Subtotal</h6>
+                                            </div>
+                                            <div class="col-7 text-right">
+                                                <h6>{{ ProductSubtotal | currency }}</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Detalle de pedido -->
+                    <div class="col-lg-3 mt-4 mt-lg-0">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Pedido: <span class="no-pedido">{{ OrderPedido }}</span></h4>
+                                <div class="row border-bottom pt-2 my-3">
+                                    <div class="col-7">
+                                        <h6 class="font-weight-bold">Precio Farmacia</h6>
+                                    </div>
+                                    <div class="col-5 text-right">
+                                        <h6>{{ OrderPrecioFarmacia | currency }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom pt-2 my-3">
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold">Oferta</h6>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h6>{{ OrderOferta | currency }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom pt-2 my-3">
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold">Descuento</h6>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h6>{{ OrderDescuento | currency }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom pt-2 my-3">
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold">I.V.A.</h6>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h6>{{ OrderIVA | currency }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row border-bottom py-2">
+                                    <div class="col-6">
+                                        <h6 class="font-weight-bold">I.E.P.S.</h6>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h6>{{ OrderIEPS | currency }}</h6>
+                                    </div>
+                                </div>
+                                <div class="row mt-4 pt-2">
+                                    <div class="col-6">
+                                        <h5 class="font-weight-bold">Total</h5>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <h5 class="font-weight-bold">{{ OrderTotal | currency }}</h5>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12">
+                                        <button class="btn btn-primario btn-rounded btn-block" data-toggle="modal" data-target="#confirmarPedido">Finalizar pedido</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-11">
+                <!--Aqui va el carrusel de elementos-->
+                <app-productos-relacionados></app-productos-relacionados>
+            </div>

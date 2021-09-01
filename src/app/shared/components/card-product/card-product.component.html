@@ -1,0 +1,25 @@
+<div class="col-12">
+    <div class="card mt-75" *ngFor="let i of tiendaArticulos">
+        <div class="card-content">
+            <div class="card-body">
+                <div class="media d-lg-flex">
+                    <div class="col-5 col-lg-3 align-self-top flex-grow-4 mr-3">
+                        <img src="{{ i.ImagenProducto }}" alt="" class="img-fluid">
+                    </div>
+                    <div class="media-body">
+                        <div class="etiquetas mb-3">
+                            <a class="trigger" href="#">Oferta</a>
+                            <a class="trigger" href="#">Sugerido</a>
+                        </div>
+                        <h5 class="mb-2">{{ i.NombreProducto }}</h5>
+                        <h6 class="stock mb-3">Stock disponible <span class="cantidad">({{ i.StockDisponible }})</span>
+                        </h6>
+                        <h6 class="mb-3"><span class="oferta-tache">{{ i.PrecioNormal }}</span> - {{ i.PrecioDescuento }}<span class="desc">{{ i.PorcentajeDescuento }} % Desc</span></h6>
+                        <a href="{{ i.UrlProducto }}/id={{ i.id }}" class="btn btn-secundario btn-rounded btn-agregar mb-3">Ver detalle</a>
+                        <button class="btn btn-primario btn-rounded btn-agregar mb-3" data-pushbar-target="right">Agregar a carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
